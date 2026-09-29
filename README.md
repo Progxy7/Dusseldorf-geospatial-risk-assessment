@@ -89,3 +89,17 @@ Spatial analysis and environmental risk assessment of industrial zones in Düsse
   * **Vector Topological Intersection:** Executed the Intersection geoprocessing algorithm to calculate the overlapping geometries between the three receptor layers and the anthropogenic hazard buffer. This creates brand new vector layers containing exclusively the areas where the inputs physically overlap.
   * **High Contrast Symbology:** Applied stark high visibility styling to the newly extracted features against a neutral basemap to emphasize the absolute critical zones within the urban matrix.
 * **Analytical Takeaway:** This mathematical extraction completely isolates the anthropogenic danger zones. Map 07a physically extracts the exact residential structures exposed to severe industrial pollution, providing the geometries needed to calculate the affected population size. Map 07b isolates the specific river segments receiving direct industrial runoff, prioritizing where municipal water quality sensors must be deployed. Map 07c extracts the logistical rail corridors operating inside high threat zones, which is vital for planning hazardous material transport routes and preventing compounding disaster scenarios.
+## Map 08: Quantitative Spatial Extraction (200 Meter Flood Hazard Intersections)
+
+### Map 08a: Extracted Flood Prone Residential Geometries
+![Map 08a: Intersected Flooded Residential](<Map 08a_Intersected Flooded Residential.png>)
+
+### Map 08b: Extracted Compromised Industrial Facilities (Critical Threat Nodes)
+![Map 08b: Intersected Flooded Industry](<Map 08b_Intersected Flooded Industry.png>)
+
+* **Strategic Rationale:** Just as the anthropogenic intersection isolated pollution victims, the hydrological intersection isolates the exact geometries vulnerable to natural inundation. Extracting these specific structural footprints provides the raw data required for municipal evacuation logistics and secondary disaster prevention.
+* **Objective:** Mathematically intersect the functional receptor layers with the 200 meter waterway buffer to isolate the precise residential and industrial polygons trapped within the active floodplain.
+* **Advanced QGIS Tools Deployed:**
+  * **Vector Topological Intersection:** Executed the Intersection geoprocessing algorithm to calculate the overlapping geometries between the receptor layers and the flood inundation buffer.
+  * **Enhanced Cartographic Highlighting:** Applied a vibrant purple fill with an expanded stroke weight and an outer glow render effect to Map 08b. This advanced styling ensures that micro geometries remain highly visible and immediately draw the eye even when viewing the entire urban scale.
+* **Analytical Takeaway:** This mathematical extraction isolates the natural disaster zones and reveals a crucial insight into urban planning. Map 08a extracts the exact residential structures exposed to severe flooding, providing the exact target areas for rescue deployment. Interestingly, Map 08b reveals a very sparse distribution of compromised industrial facilities. This sparsity is a highly positive indicator of effective historical municipal zoning, showing that most heavy industry was successfully built safely outside the riparian zone. However, these few isolated anomalies now represent the most critical secondary threat nodes in the entire city. Because they are so few, environmental agencies can focus all emergency containment funding on these specific pinpointed facilities to prevent toxic spillover during a flood.
