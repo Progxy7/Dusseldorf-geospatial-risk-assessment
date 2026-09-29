@@ -41,12 +41,20 @@ Spatial analysis and environmental risk assessment of industrial zones in Düsse
   * **Attribute Query Builder:** Executed structured SQL queries to filter and isolate distinct polygon features (specifically isolating residential and industrial classifications) directly from the raw OpenStreetMap database.
   * **Categorized Symbology Engine:** Applied custom color rendering and layer prioritization to ensure visual clarity when stacking both functional zones onto a single analytical canvas.
 * **Analytical Takeaway:** Segregating the spatial data into isolated layers proves critical for advanced risk modeling. The green residential map establishes the exact geographic footprint of human exposure. The red industrial map pinpoints the exact origin nodes for potential environmental contaminants. When overlaid in the combined view, the immediate interfaces between residential neighborhoods and industrial complexes become starkly visible. This targeted spatial extraction provides the foundational intelligence required for municipal zoning review and targeted environmental health interventions.
-## Map 05: Spatial Proximity Analysis (500 Meter Industrial Impact Radius)
-![Map 05: Industrial Proximity Buffer](<Map 05_Industrial Proximity Buffer.png>)
+## Map 05: Predictive Risk Modeling (500 Meter Industrial Hazard Buffer)
 
-* **Objective:** Model the immediate zone of influence surrounding heavy economic activity zones to identify highly vulnerable residential settlements.
-* **Cartographic Symbology:** A semi transparent red radial buffer signifies the hazard exposure perimeter, overlaid against the green human settlement receptors.
+### Map 05a: Human Exposure (Industrial Buffer and Residential Zones)
+![Map 05a: Industrial Buffer and Residential Zones](<Map 05a_Industrial and Residential.png>)
+
+### Map 05b: Ecological Vulnerability (Industrial Buffer and Waterways)
+![Map 05b: Industrial Buffer and Waterways](<Map 05b_Industrial and Waterways.png>)
+
+### Map 05c: Logistical Intersections (Industrial Buffer and Railways)
+![Map 05c: Industrial Buffer and Railways](<Map 05c_Industrial and Railways.png>)
+
+* **Strategic Rationale:** A professional spatial assessment must evolve beyond simply mapping where features are located, to analyzing how they interact. Generating a proximity buffer transitions this project from descriptive cartography into predictive environmental risk modeling. This analytical leap answers the ultimate question of environmental justice and public safety: who and what is actually within the danger zone?
+* **Objective:** Establish a 500 meter zone of influence surrounding heavy industrial operations to quantify the immediate exposure risk for human settlements, ecological corridors, and critical transport infrastructure.
 * **Advanced QGIS Tools Deployed:**
-  * **Vector Geoprocessing Buffer:** Executed a 500 meter spatial buffer originating from the boundaries of all industrial polygons to simulate standard airborne dispersion and localized runoff risk perimeters.
-  * **Topological Overlay:** Stacked the generated risk boundary beneath the residential layer to visually highlight the exact spatial intersection of hazard proximity and population density.
-* **Analytical Takeaway:** This proximity model shifts the project from simple observation to predictive risk modeling. By applying a mathematical 500 meter buffer, we explicitly highlight the residential blocks that face the highest exposure to industrial noise pollution, chemical runoff, and localized air quality degradation. Identifying these intersection zones is the absolute first step in developing targeted municipal emergency response plans and environmental justice interventions.
+  * **Vector Geoprocessing Buffer:** Applied a 500 meter spatial boundary radiating from all industrial polygons to simulate standard airborne dispersion, noise pollution limits, and localized chemical runoff perimeters.
+  * **Topological Overlay Analysis:** Stacked the generated risk perimeter beneath the primary receptor layers to visually highlight the exact spatial intersection of hazard proximity across multiple environmental domains.
+* **Analytical Takeaway:** By testing the industrial buffer against three distinct receptors, this model demonstrates comprehensive risk awareness. Map 05a isolates the specific residential neighborhoods facing maximum exposure to industrial air and noise pollution. Map 05b identifies precise locations where industrial runoff directly threatens aquatic ecosystems and municipal water quality. Map 05c pinpoints critical logistical intersections where hazardous material transport via railways overlaps with localized industrial zones. This holistic buffering approach provides a definitive spatial foundation for targeted municipal emergency response and proactive environmental policymaking.
