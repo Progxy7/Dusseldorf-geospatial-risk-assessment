@@ -72,3 +72,20 @@ Spatial analysis and environmental risk assessment of industrial zones in Düsse
   * **Hydrological Vector Buffering:** Generated a 200 meter spatial boundary expanding outward from all aquatic features to model municipal floodplains and peak water level expansion.
   * **Directional Risk Overlay:** Contrasted the active flood threat against passive receptor layers (residential and industrial polygons) to separate direct human displacement risks from secondary chemical contamination risks.
 * **Analytical Takeaway:** Treating the waterway as the hazard source completely changes the vulnerability landscape of Düsseldorf. Map 06a reveals the exact residential neighborhoods that will be physically submerged during a severe flood event, indicating where municipal evacuation routes must be prioritized. Map 06b highlights a severe secondary vulnerability by identifying industrial facilities located inside the flood zone. If floodwaters breach these industrial complexes, the receding water will drag toxic materials directly back into the primary water supply, transforming a natural hydrological disaster into an uncontrollable chemical spill.
+## Map 07: Quantitative Spatial Extraction (500 Meter Industrial Hazard Intersections)
+
+### Map 07a: Extracted High Risk Residential Geometries
+![Map 07a: Intersected Vulnerable Residential](<Map 07a_Intersected Vulnerable Residential.png>)
+
+### Map 07b: Extracted Compromised Waterway Segments
+![Map 07b: Intersected Compromised Waterways](<Map 07b_Intersected Compromised Waterways.png>)
+
+### Map 07c: Extracted Hazardous Railway Corridors
+![Map 07c: Intersected Hazardous Railways](<Map 07c_Intersected Hazardous Railways.png>)
+
+* **Strategic Rationale:** Visual overlays identify general threat proximity, but actionable environmental mitigation requires exact spatial isolation. Executing a topological intersection strips away all safe zones and extracts only the precise geometries caught inside the industrial hazard perimeter. This operation prepares the spatial data for exact area calculation and volumetric impact modeling.
+* **Objective:** Mathematically intersect the functional receptor layers with the 500 meter industrial buffer to isolate and extract the precise polygons and lines requiring immediate emergency planning.
+* **Advanced QGIS Tools Deployed:**
+  * **Vector Topological Intersection:** Executed the Intersection geoprocessing algorithm to calculate the overlapping geometries between the three receptor layers and the anthropogenic hazard buffer. This creates brand new vector layers containing exclusively the areas where the inputs physically overlap.
+  * **High Contrast Symbology:** Applied stark high visibility styling to the newly extracted features against a neutral basemap to emphasize the absolute critical zones within the urban matrix.
+* **Analytical Takeaway:** This mathematical extraction completely isolates the anthropogenic danger zones. Map 07a physically extracts the exact residential structures exposed to severe industrial pollution, providing the geometries needed to calculate the affected population size. Map 07b isolates the specific river segments receiving direct industrial runoff, prioritizing where municipal water quality sensors must be deployed. Map 07c extracts the logistical rail corridors operating inside high threat zones, which is vital for planning hazardous material transport routes and preventing compounding disaster scenarios.
