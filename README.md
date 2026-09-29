@@ -1,7 +1,7 @@
 # Dusseldorf-geospatial-risk-assessment
 Spatial analysis and environmental risk assessment of industrial zones in Düsseldorf using QGIS.
 ## Map 01: Raw Master Metric Landuse
-![Map 01: Raw Master Metric Landuse](Map 01_Raw Master Metric Landuse.png)
+![Map 01: Raw Master Metric Landuse](<Map 01_Raw Master Metric Landuse.png>)
 
 * **Objective:** Establish a clean, uncorrupted spatial database in metric units.
 * **QGIS Tool Used:** Layer Export / Save Features As (GeoPackage format).
