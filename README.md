@@ -17,7 +17,7 @@ Spatial analysis and environmental risk assessment of industrial zones in Düsse
 * **Output Layer:** `01_Water_Metric` (Forced to `EPSG:32632` WGS 84 / UTM zone 32N).
 * **Analytical Takeaway:** Rendered in solid hydrographic blue, this layer represents all natural and artificial surface water bodies across Düsseldorf. Establishing this receptor layer is critical because industrial pollutant runoff directly threatens aquatic ecosystems and municipal water security.
 ## Map 03: Linear Transport & Hydrographic Receptors (Railways and Water)
-![Map 03: Railways and Water](<Map 03_Railways and Water.png>)
+![Map 03: Railways and Water](<Map 03_Railways and Water..png>)
 
 * **Objective:** Map linear transport infrastructure alongside surface water bodies to visualize multi-receptor proximity within the urban matrix.
 * **QGIS Tool Used:** Layer Styling and Symbology Stack (Multi-layer canvas rendering).
