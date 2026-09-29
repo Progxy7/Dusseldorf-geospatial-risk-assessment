@@ -16,7 +16,7 @@ Spatial analysis and environmental risk assessment of industrial zones in Düsse
 * **QGIS Tool Used:** Multi-layer symbol stacking and layer extent verification.
 * **Input Layers:** Master landuse polygon dataset paired with OpenStreetMap water receptors (`EPSG:32632`).
 * **Analytical Takeaway:** Initial exploration revealed that raw landuse polygons leave minor boundary gaps where major water channels extend past the landuse edge. By presenting a paired multi-layer view (landuse + water alongside isolated waterways), this workflow preserves complete topological integrity, ensuring all hydrographic receptors are accounted for without visual clipping at the study area fringes.
-## Map 03: Linear Transport & Hydrographic Receptors (Railways and Water)
+## Map 03: Linear Transport & Hydrographic Receptors (Railways and Waterways)
 ![Map 03: Railways and Water](<Map 03_Railways and Water..png>)
 
 * **Objective:** Map linear transport infrastructure alongside surface water bodies to visualize multi-receptor proximity within the urban matrix.
