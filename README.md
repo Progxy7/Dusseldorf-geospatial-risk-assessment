@@ -23,4 +23,15 @@ Spatial analysis and environmental risk assessment of industrial zones in Düsse
 * **QGIS Tool Used:** Layer Styling and Symbology Stack (Multi-layer canvas rendering).
 * **Input Layers:** Water receptor layer and raw OpenStreetMap railway lines (reprojected to `EPSG:32632`).
 * **Analytical Takeaway:** In this multi-receptor view, solid blue polygons represent surface water bodies, while dark charcoal lines represent the railway network. Overlaying these layers demonstrates how transportation corridors intersect with sensitive ecological zones, establishing a visual baseline for multi-hazard spatial risk assessment.
+## Map 04: Functional Urban Zones (Residential and Industrial Spatial Extraction)
+![Map 04a: Residential Zones](<Map 04a_Residential.png>)
+![Map 04b: Industrial Zones](<Map 04b_Industrial.png>)
+![Map 04c: Combined Functional Zones](<Map 04c_Combined Zones.png>)
 
+* **Objective:** Extract specific functional urban zones from the master dataset to evaluate the spatial proximity between vulnerable human populations and heavy industrial operations.
+* **Cartographic Symbology:** Residential settlements are rendered in distinctive green, while industrial and commercial operation zones are designated in high visibility red.
+* **Advanced QGIS Tools Deployed:**
+  * **Vector Geoprocessing:** Verified and standardized all vector layers to the projected coordinate system EPSG:32632 (WGS 84 / UTM zone 32N) to guarantee accurate metric area calculations and spatial alignment.
+  * **Attribute Query Builder:** Executed structured SQL queries to filter and isolate distinct polygon features (specifically isolating residential and industrial classifications) directly from the raw OpenStreetMap database.
+  * **Categorized Symbology Engine:** Applied custom color rendering and layer prioritization to ensure visual clarity when stacking both functional zones onto a single analytical canvas.
+* **Analytical Takeaway:** Segregating the spatial data into isolated layers proves critical for advanced risk modeling. The green residential map establishes the exact geographic footprint of human exposure. The red industrial map pinpoints the exact origin nodes for potential environmental contaminants. When overlaid in the combined view, the immediate interfaces between residential neighborhoods and industrial complexes become starkly visible. This targeted spatial extraction provides the foundational intelligence required for municipal zoning review and targeted environmental health interventions.
