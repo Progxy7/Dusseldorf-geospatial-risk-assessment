@@ -103,3 +103,14 @@ Spatial analysis and environmental risk assessment of industrial zones in Düsse
   * **Vector Topological Intersection:** Executed the Intersection geoprocessing algorithm to calculate the overlapping geometries between the receptor layers and the flood inundation buffer.
   * **Enhanced Cartographic Highlighting:** Applied a vibrant purple fill with an expanded stroke weight and an outer glow render effect to Map 08b. This advanced styling ensures that micro geometries remain highly visible and immediately draw the eye even when viewing the entire urban scale.
 * **Analytical Takeaway:** This mathematical extraction isolates the natural disaster zones and reveals a crucial insight into urban planning. Map 08a extracts the exact residential structures exposed to severe flooding, providing the exact target areas for rescue deployment. Interestingly, Map 08b reveals a very sparse distribution of compromised industrial facilities. This sparsity is a highly positive indicator of effective historical municipal zoning, showing that most heavy industry was successfully built safely outside the riparian zone. However, these few isolated anomalies now represent the most critical secondary threat nodes in the entire city. Because they are so few, environmental agencies can focus all emergency containment funding on these specific pinpointed facilities to prevent toxic spillover during a flood.
+## Map 09: Industrial Distribution and Topographic Context
+
+![Map 09: Topographic Vulnerability](<Map 09_Topographic Vulnerability.png>)
+
+* **Strategic Rationale:** Evaluating industrial hazards requires understanding the physical terrain. Chemical spills and heavy gas emissions are dictated by gravity and elevation. A flat map obscures these physical realities.
+* **Objective:** Integrate high resolution elevation data with industrial zoning to visualize potential downhill contamination pathways toward waterways and residential areas.
+* **Advanced QGIS Tools Deployed:**
+  * **Web Map Services:** Connected directly to OpenTopoMap servers via QuickMapServices to stream contour and hill shading data.
+  * **Geometry Dissolve:** Merged administrative boundary subdivisions into a single unified polygon to eliminate internal rendering conflicts.
+  * **Inverted Polygon Masking:** Applied an inverted geometry style with a Solid White fill and a Transparent stroke to clip the global web map perfectly to the municipal boundary. Specifying a fully transparent stroke was critical to eliminating rendering artifacts along the boundary edge.
+* **Analytical Takeaway:** The topographic basemap reveals the exact elevation of industrial zones relative to the river valley. By masking the outside world with a transparent stroke boundary, the visual focus remains strictly on the internal municipal terrain. This sets the foundation for calculating the specific downhill threat of the largest industrial facilities.
