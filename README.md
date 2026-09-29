@@ -58,3 +58,17 @@ Spatial analysis and environmental risk assessment of industrial zones in Düsse
   * **Vector Geoprocessing Buffer:** Applied a 500 meter spatial boundary radiating from all industrial polygons to simulate standard airborne dispersion, noise pollution limits, and localized chemical runoff perimeters.
   * **Topological Overlay Analysis:** Stacked the generated risk perimeter beneath the primary receptor layers to visually highlight the exact spatial intersection of hazard proximity across multiple environmental domains.
 * **Analytical Takeaway:** By testing the industrial buffer against three distinct receptors, this model demonstrates comprehensive risk awareness. Map 05a isolates the specific residential neighborhoods facing maximum exposure to industrial air and noise pollution. Map 05b identifies precise locations where industrial runoff directly threatens aquatic ecosystems and municipal water quality. Map 05c pinpoints critical logistical intersections where hazardous material transport via railways overlaps with localized industrial zones. This holistic buffering approach provides a definitive spatial foundation for targeted municipal emergency response and proactive environmental policymaking.
+## Map 06: Hydrological Threat Modeling (200 Meter Flood Inundation Buffer)
+
+### Map 06a: Human Vulnerability to Flooding (Water Threat vs Residential Zones)
+![Map 06a: Waterway Buffer and Residential Zones](<Map 06a_Waterway Buffer and Residential.png>)
+
+### Map 06b: Secondary Disaster Risk (Water Threat vs Industrial Zones)
+![Map 06b: Waterway Buffer and Industrial Zones](<Map 06b_Waterway Buffer and Industrial.png>)
+
+* **Strategic Rationale:** While previous models focused on anthropogenic hazards where industry acted as the source of contamination, this model reverses the directional risk to evaluate natural hazards where water acts as the active threat. Mapping the inundation zone is essential to predict both primary structural damage and catastrophic secondary environmental spills.
+* **Objective:** Establish a 200 meter riparian flood buffer radiating from surface water bodies to simulate severe flood scenarios against human settlements and heavy industrial infrastructure.
+* **Advanced QGIS Tools Deployed:**
+  * **Hydrological Vector Buffering:** Generated a 200 meter spatial boundary expanding outward from all aquatic features to model municipal floodplains and peak water level expansion.
+  * **Directional Risk Overlay:** Contrasted the active flood threat against passive receptor layers (residential and industrial polygons) to separate direct human displacement risks from secondary chemical contamination risks.
+* **Analytical Takeaway:** Treating the waterway as the hazard source completely changes the vulnerability landscape of Düsseldorf. Map 06a reveals the exact residential neighborhoods that will be physically submerged during a severe flood event, indicating where municipal evacuation routes must be prioritized. Map 06b highlights a severe secondary vulnerability by identifying industrial facilities located inside the flood zone. If floodwaters breach these industrial complexes, the receding water will drag toxic materials directly back into the primary water supply, transforming a natural hydrological disaster into an uncontrollable chemical spill.
