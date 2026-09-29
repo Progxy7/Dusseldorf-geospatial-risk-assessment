@@ -114,3 +114,18 @@ Spatial analysis and environmental risk assessment of industrial zones in Düsse
   * **Geometry Dissolve:** Merged administrative boundary subdivisions into a single unified polygon to eliminate internal rendering conflicts.
   * **Inverted Polygon Masking:** Applied an inverted geometry style with a Solid White fill and a Transparent stroke to clip the global web map perfectly to the municipal boundary. Specifying a fully transparent stroke was critical to eliminating rendering artifacts along the boundary edge.
 * **Analytical Takeaway:** The topographic basemap reveals the exact elevation of industrial zones relative to the river valley. By masking the outside world with a transparent stroke boundary, the visual focus remains strictly on the internal municipal terrain. This sets the foundation for calculating the specific downhill threat of the largest industrial facilities.
+## Map 10: Spatial Hazard Analysis and Infrastructure Vulnerability
+
+### Map 10A: Far View Biggest Facility
+![Map 10A Far View](<Map 10a_Far View Biggest Facility.png>)
+
+### Map 10B: Close Up View Biggest Facility
+![Map 10B Close Up View](<Map 10b_Close Up View Biggest Facility.png>)
+
+* **Objective:** To simulate a severe industrial accident and identify critical civilian and environmental infrastructure caught within a 500 meter containment radius.
+* **Geoprocessing and Analytical Workflow:**
+  * **Spatial SQL Extraction:** Bypassed manual selection errors by writing a direct expression query inside the attribute table using `$area = maximum($area)` to automatically isolate the single largest industrial polygon.
+  * **Custom Text Labeling:** Activated the QGIS labeling engine on the isolated layer, set the value string to `'Biggest Facility'`, and applied a high contrast white text buffer halo for clear legibility over the basemap.
+  * **Proximity Buffering:** Executed a 500 meter dissolve buffer around the facility perimeter to generate a continuous, uniform containment zone representing potential airborne dispersion or surface runoff hazards.
+* **Data Limitations and Proxies:** In the absence of facility specific chemical emission inventories we utilized spatial area as a proxy for maximum industrial scale. We acknowledge that spatial footprint does not directly equate to toxicity as a large logistics warehouse could trigger this extraction over a smaller chemical processing plant. We therefore classify the target strictly as the Biggest Facility rather than the highest toxic threat.
+* **Impact Assessment:** The simulated hazard zone reveals severe spatial vulnerability. The 500 meter radius directly engulfs a major railway line, multiple high density residential blocks, and intersects the main river. The river intersection is particularly critical as topographic runoff from the facility could introduce a secondary aquatic contamination vector.
