@@ -23,3 +23,10 @@ Spatial analysis and environmental risk assessment of industrial zones in Düsse
 * **QGIS Tool Used:** Layer Styling and Symbology Stack (Multi-layer canvas rendering).
 * **Input Layers:** Water receptor layer and raw OpenStreetMap railway lines (reprojected to `EPSG:32632`).
 * **Analytical Takeaway:** In this multi-receptor view, solid blue polygons represent surface water bodies, while dark charcoal lines represent the railway network. Overlaying these layers demonstrates how transportation corridors intersect with sensitive ecological zones, establishing a visual baseline for multi-hazard spatial risk assessment.
+## Map 04: Comprehensive Multi-Hazard Exposure Synthesis (Landuse, Waterways & Railways)
+![Map 04: Comprehensive Risk Synthesis](<Map 04_Comprehensive Risk Synthesis.png>)
+
+* **Objective:** Synthesize all spatial layers into a single comprehensive exposure map to evaluate multi-hazard proximity and infrastructure vulnerability.
+* **QGIS Tool Used:** Full Symbology Stack Overlay & Multi-Layer Harmonization (`EPSG:32632`).
+* **Input Layers:** Master landuse polygons, hydrographic receptor polygons, and railway transportation lines.
+* **Analytical Takeaway:** This final synthesis map integrates the baseline landuse context with water bodies and railway corridors. By visualizing these overlapping systems simultaneously, researchers and planners can identify critical points where linear infrastructure intersects with aquatic hazard zones, providing a robust spatial foundation for municipal emergency response and climate resilience planning in Düsseldorf.
