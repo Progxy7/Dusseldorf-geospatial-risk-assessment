@@ -24,8 +24,14 @@ Spatial analysis and environmental risk assessment of industrial zones in Düsse
 * **Input Layers:** Water receptor layer and raw OpenStreetMap railway lines (reprojected to `EPSG:32632`).
 * **Analytical Takeaway:** In this multi-receptor view, solid blue polygons represent surface water bodies, while dark charcoal lines represent the railway network. Overlaying these layers demonstrates how transportation corridors intersect with sensitive ecological zones, establishing a visual baseline for multi-hazard spatial risk assessment.
 ## Map 04: Functional Urban Zones (Residential and Industrial Spatial Extraction)
+
+### Map 04a: Human Settlement Receptors (Green)
 ![Map 04a: Residential Zones](<Map 04a_Residential.png>)
+
+### Map 04b: Heavy Economic Activity Zones (Red)
 ![Map 04b: Industrial Zones](<Map 04b_Industrial.png>)
+
+### Map 04c: Combined Functional Zone Interface
 ![Map 04c: Combined Functional Zones](<Map 04c_Combined Zones.png>)
 
 * **Objective:** Extract specific functional urban zones from the master dataset to evaluate the spatial proximity between vulnerable human populations and heavy industrial operations.
