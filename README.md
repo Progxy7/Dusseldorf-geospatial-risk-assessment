@@ -15,4 +15,11 @@ Spatial analysis and environmental risk assessment of industrial zones in Düsse
 * **QGIS Tool Used:** Layer Extraction & Reprojection / Save Features As (GeoPackage format).
 * **Input Layer:** Raw OpenStreetMap water polygon dataset (`gis_osm_water_a_free_1`).
 * **Output Layer:** `01_Water_Metric` (Forced to `EPSG:32632` WGS 84 / UTM zone 32N).
-* **Analytical Takeaway:** Rendered in solid hydrographic blue, this layer represents all natural and artificial surface water bodies across Düsseldorf. Establishing this receptor layer independently is critical because industrial pollutant runoff directly threatens aquatic ecosystems and municipal water security.
+* **Analytical Takeaway:** Rendered in solid hydrographic blue, this layer represents all natural and artificial surface water bodies across Düsseldorf. Establishing this receptor layer is critical because industrial pollutant runoff directly threatens aquatic ecosystems and municipal water security.
+## Map 03: Linear Transport & Hydrographic Receptors (Railways and Water)
+![Map 03: Railways and Water](<Map 03_Railways and Water.png>)
+
+* **Objective:** Map linear transport infrastructure alongside surface water bodies to visualize multi-receptor proximity within the urban matrix.
+* **QGIS Tool Used:** Layer Styling and Symbology Stack (Multi-layer canvas rendering).
+* **Input Layers:** Water receptor layer and raw OpenStreetMap railway lines (reprojected to `EPSG:32632`).
+* **Analytical Takeaway:** In this multi-receptor view, solid blue polygons represent surface water bodies, while dark charcoal lines represent the railway network. Overlaying these layers demonstrates how transportation corridors intersect with sensitive ecological zones, establishing a visual baseline for multi-hazard spatial risk assessment.
