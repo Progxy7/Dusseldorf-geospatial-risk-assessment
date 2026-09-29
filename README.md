@@ -8,14 +8,14 @@ Spatial analysis and environmental risk assessment of industrial zones in Düsse
 * **Input Layer:** Raw OpenStreetMap shapefile (`gis_osm_landuse_a_free_1`).
 * **Output Layer:** `00-landuse-master-metric` (Forced to `EPSG:32632` WGS 84 / UTM zone 32N).
 * **Analytical Takeaway:** The raw OpenStreetMap landuse dataset contains every type of urban zone mixed together—residential areas, industrial complexes, commercial districts, parks, and forests. By locking the coordinate system to metric units right from the start, we set a stable foundation and completely avoid the projection errors that can break spatial calculations later.
-## Map 02: Hydrographic Receptors (Waterways)
-![Map 02: Hydrographic Receptors](<Map 02_Waterways.png>)
+## Map 02: Hydrographic Receptors & Base Context (Waterways & Landuse)
+![Map 02a: Waterways with Landuse Context](<Map 02_Waterways and Landuse.png>)
+![Map 02b: Detailed Waterway Extent](<Map 02_Waterways.png>)
 
-* **Objective:** Extract and isolate all surface water bodies within the Düsseldorf study area as primary environmental receptors.
-* **QGIS Tool Used:** Layer Extraction & Reprojection / Save Features As (GeoPackage format).
-* **Input Layer:** Raw OpenStreetMap water polygon dataset (`gis_osm_water_a_free_1`).
-* **Output Layer:** `01_Water_Metric` (Forced to `EPSG:32632` WGS 84 / UTM zone 32N).
-* **Analytical Takeaway:** Rendered in solid hydrographic blue, this layer represents all natural and artificial surface water bodies across Düsseldorf. Establishing this receptor layer is critical because industrial pollutant runoff directly threatens aquatic ecosystems and municipal water security.
+* **Objective:** Isolate and document surface water bodies while maintaining spatial continuity with the master landuse boundary.
+* **QGIS Tool Used:** Multi-layer symbol stacking and layer extent verification.
+* **Input Layers:** Master landuse polygon dataset paired with OpenStreetMap water receptors (`EPSG:32632`).
+* **Analytical Takeaway:** Initial exploration revealed that raw landuse polygons leave minor boundary gaps where major water channels extend past the landuse edge. By presenting a paired multi-layer view (landuse + water alongside isolated waterways), this workflow preserves complete topological integrity, ensuring all hydrographic receptors are accounted for without visual clipping at the study area fringes.
 ## Map 03: Linear Transport & Hydrographic Receptors (Railways and Water)
 ![Map 03: Railways and Water](<Map 03_Railways and Water..png>)
 
