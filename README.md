@@ -131,20 +131,26 @@ Spatial analysis and environmental risk assessment of industrial zones in Düsse
 * **Impact Assessment:** The simulated hazard zone reveals severe spatial vulnerability. The 500 meter radius directly engulfs a major railway line, multiple high density residential blocks, and intersects the main river. The river intersection is particularly critical as topographic runoff from the facility could introduce a secondary aquatic contamination vector.
 ## Map 11: Emergency Evacuation and Environmental Remediation Strategy
 
-### Map 11: Emergency Evacuation and Water Remediation
-![Map 11 Emergency Strategy](<Map 11_Emergency Evacuation and Remediation Strategy.png>)
+### Map 11A: Regional Industrial Hazard Context and 500 Meter Buffer Extent
+![Map 11A Hazard Context](<Map 11A_Industrial Hazard Context.png>)
 
-* **Objective:** To establish an emergency response protocol and containment strategy for civilian evacuation and aquatic protection following a severe industrial hazard event at the primary facility, specifically focusing on the massive thyssenkrupp Steel Europe AG plant as the largest industrial asset in the study area.
-* **Complete Step-by-Step Geoprocessing and QGIS Workflow:**
+* **Objective:** To establish the regional industrial footprint and spatial risk extent surrounding the primary manufacturing asset, documenting how secondary industrial units interact with the hazard zone.
+* **Geoprocessing and Analytical Workflow:**
+  * **Buffer Zone Generation:** Created a precise 500 meter operational buffer around the primary facility to model potential thermal radiation, blast overpressure, and air dispersion plumes.
+  * **Industrial Extent Mapping:** Mapped the massive thyssenkrupp Steel Europe AG facility as the core asset while keeping secondary surrounding industrial footprints visible in red across both the interior and exterior of the buffer boundary to capture the complete regional industrial landscape.
+  * **Attribute Table and Labeling Setup:** Configured custom text string fields within the vector attribute tables and activated the QGIS labeling engine with high contrast white text buffer halos to ensure clear identification of all regional facilities.
+
+### Map 11B: Tactical Emergency Evacuation and Aquatic Containment Strategy
+![Map 11B Emergency Strategy](<Map 11B_Emergency Evacuation and Remediation Strategy.png>)
+
+* **Objective:** To establish an advanced emergency response protocol and redundant containment strategy for civilian evacuation and aquatic protection following a severe industrial hazard event at the primary facility.
+* **Complete Step-by-Step QGIS Workflow:**
   * **Vulnerability Intersection:** Executed spatial intersection geoprocessing tools using the buffered facility layer against baseline infrastructure to extract precise vulnerable residences, vulnerable railway, and vulnerable waterway geometries.
-  * **Residential Exposure Mapping:** Highlighted the specific shades of pink polygon geometries directly surrounding the major thyssenkrupp Steel Europe AG facility to identify residential populations living within the immediate impact zone.
-  * **Emergency Evacuation Routing:** Digitized four distinct green escape routes designed to guide residents safely away from the potential hazard zone while bypassing compromised regional transportation corridors.
-  * **Aquatic Containment Strategy:** Deployed three thick purple and black containment boom lines strategically across the waterways intersecting the facility perimeter to intercept toxic runoff and protect all three vulnerable water channels from downstream contamination.
-  * **Official Facility Identification:** Extracted and mapped the official name thyssenkrupp Steel Europe AG directly from the underlying vector data attributes, highlighting its designation as the biggest facility within the Düsseldorf industrial zone.
-  * **Attribute Table Configuration:** Opened the vector layer attribute tables via the layer panels, enabled editing mode, and created custom text string fields to explicitly store asset nomenclature and descriptions.
-  * **Dynamic Labeling Engine Setup:** Configured QGIS label properties from no labels to single labels, linked the value expression directly to the custom attribute fields, activated high contrast white text buffer halos, and disabled scale-dependent rendering to ensure universal visibility.
-  * **Collision Management:** Overrode default cartographic suppression by enabling settings to show all colliding labels and adjusted line placement parameters to ensure zero occlusion across dense urban intersections.
+  * **Residential Exposure Mapping:** Highlighted the specific shades of green polygon geometries representing regional residential populations captured within the immediate impact assessment framework, keeping secondary background industrial layers toggled off to maintain absolute visual focus.
+  * **Emergency Evacuation Routing:** Digitized four distinct neon green escape routes with clear custom attribute labels designed to guide residents safely away from the potential hazard zone while bypassing compromised regional transportation corridors.
+  * **Redundant Aquatic Containment Strategy:** Deployed thick purple and black primary and secondary containment boom lines strategically across the main river and regional waterways intersecting the facility perimeter, using the node editing tool to precisely route the lines around secondary obstacles and ensure complete interception of toxic runoff across all three water channels.
+  * **Dynamic Labeling and Collision Management:** Configured QGIS label properties from no labels to single labels, linked value expressions directly to custom attribute fields, activated universal visibility, and enabled settings to show all colliding labels to ensure zero occlusion across dense urban intersections.
 * **Metallurgical Hazard Profile and Operational Strategy:**
-  * **Heavy Metal and Chemical Runoff Mitigation:** Steel manufacturing operations involving blast furnaces, pickling lines, and industrial cooling baths carry high risks of acid and oil laden water runoff during a containment breach, justifying the triple containment boom deployment across local waterways protecting the surrounding aquatic network.
-  * **Thermal and Blast Protection:** High temperature metal processing and combustible industrial gases dictate the strict 500 meter buffer zone surrounding the massive thyssenkrupp facility to safeguard the adjacent residential pink population polygons from blast overpressure and air dispersion.
-  * **Logistical Disruption Response:** Industrial heavy freight integration requires four distinct multi-directional vector escape corridors to effectively disperse civilian density away from gridlocked regional transport arteries.
+  * **Heavy Metal and Chemical Runoff Mitigation:** Steel manufacturing operations involving blast furnaces, pickling lines, and industrial cooling baths carry high risks of acid and oil laden water runoff during a containment breach, justifying the deployment of redundant primary and secondary containment booms across local waterways to guarantee aquatic protection.
+  * **Thermal and Blast Protection:** High temperature metal processing and combustible industrial gases dictate the strict 500 meter buffer zone surrounding the massive thyssenkrupp facility to safeguard the adjacent residential green population polygons from blast overpressure and air dispersion.
+  * **Logistical Disruption Response:** Industrial heavy freight integration requires four distinct multi-directional neon green vector escape corridors to effectively disperse civilian density away from gridlocked regional transport arteries.
