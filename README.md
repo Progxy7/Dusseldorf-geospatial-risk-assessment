@@ -2,7 +2,7 @@
 Spatial analysis and environmental risk assessment of industrial zones in Düsseldorf using QGIS.
 
 ## Executive Summary and Research Methodology
-This project employs a macro to micro spatial analytical framework. The research began with a comprehensive regional assessment of the greater Düsseldorf industrial zone to map overarching infrastructure and identify the most significant environmental hazard sources. Upon isolating thyssenkrupp Steel Europe AG as the single largest operational facility, the project narrows into a highly focused case study. By identifying this massive primary facility, the spatial model directly answers the core research objective: to evaluate severe industrial public health impacts and engineer physical emergency mitigation strategies for the surrounding population.
+This project employs a macro to micro spatial analytical framework. The research began with a comprehensive regional assessment of the greater Düsseldorf industrial zone to map overarching infrastructure and identify the most significant environmental hazard sources. Upon isolating Thyssenkrupp Steel Europe AG as the single largest operational facility, the project narrows into a highly focused case study. By identifying this massive primary facility, the spatial model directly answers the core research objective: to evaluate severe industrial public health impacts and engineer physical emergency mitigation strategies for the surrounding population.
 
 ## Map 01: Raw Master Metric Landuse
 ![Map 01: Raw Master Metric Landuse](<Map 01_Raw Master Metric Landuse.png>)
