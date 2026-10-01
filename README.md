@@ -154,3 +154,23 @@ Spatial analysis and environmental risk assessment of industrial zones in Düsse
   * **Heavy Metal and Chemical Runoff Mitigation:** Steel manufacturing operations involving blast furnaces, pickling lines, and industrial cooling baths carry high risks of acid and oil laden water runoff during a containment breach, justifying the deployment of redundant primary and secondary containment booms across local waterways to guarantee aquatic protection.
   * **Thermal and Blast Protection:** High temperature metal processing and combustible industrial gases dictate the strict 500 meter buffer zone surrounding the massive thyssenkrupp facility to safeguard the adjacent residential green population polygons from blast overpressure and air dispersion.
   * **Logistical Disruption Response:** Industrial heavy freight integration requires four distinct multi-directional neon green vector escape corridors to effectively disperse civilian density away from gridlocked regional transport arteries.
+## Part 1: Spatial Proximity and Population Impact Analysis
+
+* **Objective:** To quantify the environmental footprint, residential exposure density, and infrastructure vulnerability surrounding the primary heavy manufacturing asset within the Düsseldorf industrial cluster.
+* **Analytical Methodology:**
+  * **Buffer Proximity Extraction:** Utilized QGIS vector overlay tools to measure precise radial distances from the massive perimeter of the thyssenkrupp Steel Europe AG facility, establishing a vast 500 meter high hazard operational threshold.
+  * **Population Density Intersection:** Intersected the hazard buffer with regional demographic polygon layers, revealing exactly 17 major residential block zones trapped within the immediate impact zone.
+  * **Exposure Quantification:** Executed spatial geometry calculations and dasymetric density mapping to model a potential exposure footprint. Based on total structural area, the model estimates a theoretical maximum capacity of up to 65,298 residents within the high hazard zone.
+* **Findings:** The spatial proximity model indicates a massive potential civilian exposure footprint exceeding 65,000 individuals. While this represents a geometric maximum rather than an exact census headcount, the sheer volume of structural residential capacity engulfed by the multi kilometer facility perimeter heavily justifies the strict delineation of safety zones and the four critical evacuation corridors.
+## Part 2: Air Pollution and Atmospheric Dispersion Modeling
+
+![Map 11C Air Pollution Zones](<Map 11C_Air Pollution.png>)
+
+* **Objective:** To model heavy industrial air pollution dispersion and the resulting air quality risks across the surrounding residential zones.
+* **Environmental and Public Health Context:**
+  * **Air Pollution Profile:** Heavy steel processing involving blast furnaces, coking plants, and basic oxygen steelmaking generates massive volumes of atmospheric emissions, specifically dangerous particulate matter, sulfur dioxide, nitrogen oxides, and carbon monoxide.
+  * **Toxicity Gradient Application:** The multi color hazard classification correlates directly to modeled air pollution concentration limits radiating from the central facility.
+    * **High Air Pollution (Red):** The inner 200 meter radius containing maximum concentrations of toxic pollutants and severe respiratory hazards.
+    * **Moderate Air Pollution (Orange):** The intermediate 200 to 500 meter radius representing scattered diffusion and elevated public health risk.
+    * **Low Air Pollution (Green):** The outer 500 to 1000 meter radius where industrial emissions diffuse into safe atmospheric background levels.
+* **Operational Integration:** The spatial air pollution model validates the necessity of the evacuation network, ensuring that civilian corridors direct the estimated 65,298 exposed residents laterally outward away from the high air pollution zones.
