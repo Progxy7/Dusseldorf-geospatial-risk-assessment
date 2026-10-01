@@ -1,28 +1,35 @@
-# Dusseldorf-geospatial-risk-assessment
+# Dusseldorf Geospatial Risk Assessment
 Spatial analysis and environmental risk assessment of industrial zones in Düsseldorf using QGIS.
+
+## Executive Summary and Research Methodology
+This project employs a macro to micro spatial analytical framework. The research began with a comprehensive regional assessment of the greater Düsseldorf industrial zone to map overarching infrastructure and identify the most significant environmental hazard sources. Upon isolating thyssenkrupp Steel Europe AG as the single largest operational facility, the project narrows into a highly focused case study. By identifying this massive primary facility, the spatial model directly answers the core research objective: to evaluate severe industrial public health impacts and engineer physical emergency mitigation strategies for the surrounding population.
+
 ## Map 01: Raw Master Metric Landuse
 ![Map 01: Raw Master Metric Landuse](<Map 01_Raw Master Metric Landuse.png>)
 
 * **Objective:** Establish a clean, uncorrupted spatial database in metric units.
 * **QGIS Tool Used:** Layer Export / Save Features As (GeoPackage format).
 * **Input Layer:** Raw OpenStreetMap shapefile (`gis_osm_landuse_a_free_1`).
-* **Output Layer:** `00-landuse-master-metric` (Forced to `EPSG:32632` WGS 84 / UTM zone 32N).
-* **Analytical Takeaway:** The raw OpenStreetMap landuse dataset contains every type of urban zone mixed together—residential areas, industrial complexes, commercial districts, parks, and forests. By locking the coordinate system to metric units right from the start, we set a stable foundation and completely avoid the projection errors that can break spatial calculations later.
-## Map 02: Hydrographic Receptors & Base Context (Waterways & Landuse)
+* **Output Layer:** `00_landuse_master_metric` (Forced to `EPSG:32632` WGS 84 / UTM zone 32N).
+* **Analytical Takeaway:** The raw OpenStreetMap landuse dataset contains every type of urban zone mixed together including residential areas, industrial complexes, commercial districts, parks, and forests. By locking the coordinate system to metric units right from the start, we set a stable foundation and completely avoid the projection errors that can break spatial calculations later.
+
+## Map 02: Hydrographic Receptors and Base Context (Waterways and Landuse)
 ![Map 02a: Waterways with Landuse Context](<Map 02_Waterways and Landuse.png>)
 ![Map 02b: Detailed Waterway Extent](<Map 02_Waterways.png>)
 
 * **Objective:** Isolate and document surface water bodies while maintaining spatial continuity with the master landuse boundary.
-* **QGIS Tool Used:** Multi-layer symbol stacking and layer extent verification.
+* **QGIS Tool Used:** Multi layer symbol stacking and layer extent verification.
 * **Input Layers:** Master landuse polygon dataset paired with OpenStreetMap water receptors (`EPSG:32632`).
-* **Analytical Takeaway:** Initial exploration revealed that raw landuse polygons leave minor boundary gaps where major water channels extend past the landuse edge. By presenting a paired multi-layer view (landuse + water alongside isolated waterways), this workflow preserves complete topological integrity, ensuring all hydrographic receptors are accounted for without visual clipping at the study area fringes.
-## Map 03: Linear Transport & Hydrographic Receptors (Railways and Waterways)
+* **Analytical Takeaway:** Initial exploration revealed that raw landuse polygons leave minor boundary gaps where major water channels extend past the landuse edge. By presenting a paired multi layer view (landuse plus water alongside isolated waterways), this workflow preserves complete topological integrity, ensuring all hydrographic receptors are accounted for without visual clipping at the study area fringes.
+
+## Map 03: Linear Transport and Hydrographic Receptors (Railways and Waterways)
 ![Map 03: Railways and Water](<Map 03_Railways and Water..png>)
 
-* **Objective:** Map linear transport infrastructure alongside surface water bodies to visualize multi-receptor proximity within the urban matrix.
-* **QGIS Tool Used:** Layer Styling and Symbology Stack (Multi-layer canvas rendering).
+* **Objective:** Map linear transport infrastructure alongside surface water bodies to visualize multi receptor proximity within the urban matrix.
+* **QGIS Tool Used:** Layer Styling and Symbology Stack (Multi layer canvas rendering).
 * **Input Layers:** Water receptor layer and raw OpenStreetMap railway lines (reprojected to `EPSG:32632`).
-* **Analytical Takeaway:** In this multi-receptor view, solid blue polygons represent surface water bodies, while dark charcoal lines represent the railway network. Overlaying these layers demonstrates how transportation corridors intersect with sensitive ecological zones, establishing a visual baseline for multi-hazard spatial risk assessment.
+* **Analytical Takeaway:** In this multi receptor view, solid blue polygons represent surface water bodies, while dark charcoal lines represent the railway network. Overlaying these layers demonstrates how transportation corridors intersect with sensitive ecological zones, establishing a visual baseline for multi hazard spatial risk assessment.
+
 ## Map 04: Functional Urban Zones (Residential and Industrial Spatial Extraction)
 
 ### Map 04a: Human Settlement Receptors (Green)
@@ -41,6 +48,7 @@ Spatial analysis and environmental risk assessment of industrial zones in Düsse
   * **Attribute Query Builder:** Executed structured SQL queries to filter and isolate distinct polygon features (specifically isolating residential and industrial classifications) directly from the raw OpenStreetMap database.
   * **Categorized Symbology Engine:** Applied custom color rendering and layer prioritization to ensure visual clarity when stacking both functional zones onto a single analytical canvas.
 * **Analytical Takeaway:** Segregating the spatial data into isolated layers proves critical for advanced risk modeling. The green residential map establishes the exact geographic footprint of human exposure. The red industrial map pinpoints the exact origin nodes for potential environmental contaminants. When overlaid in the combined view, the immediate interfaces between residential neighborhoods and industrial complexes become starkly visible. This targeted spatial extraction provides the foundational intelligence required for municipal zoning review and targeted environmental health interventions.
+
 ## Map 05: Predictive Risk Modeling (500 Meter Industrial Hazard Buffer)
 
 ### Map 05a: Human Exposure (Industrial Buffer and Residential Zones)
@@ -58,6 +66,7 @@ Spatial analysis and environmental risk assessment of industrial zones in Düsse
   * **Vector Geoprocessing Buffer:** Applied a 500 meter spatial boundary radiating from all industrial polygons to simulate standard airborne dispersion, noise pollution limits, and localized chemical runoff perimeters.
   * **Topological Overlay Analysis:** Stacked the generated risk perimeter beneath the primary receptor layers to visually highlight the exact spatial intersection of hazard proximity across multiple environmental domains.
 * **Analytical Takeaway:** By testing the industrial buffer against three distinct receptors, this model demonstrates comprehensive risk awareness. Map 05a isolates the specific residential neighborhoods facing maximum exposure to industrial air and noise pollution. Map 05b identifies precise locations where industrial runoff directly threatens aquatic ecosystems and municipal water quality. Map 05c pinpoints critical logistical intersections where hazardous material transport via railways overlaps with localized industrial zones. This holistic buffering approach provides a definitive spatial foundation for targeted municipal emergency response and proactive environmental policymaking.
+
 ## Map 06: Hydrological Threat Modeling (200 Meter Flood Inundation Buffer)
 
 ### Map 06a: Human Vulnerability to Flooding (Water Threat vs Residential Zones)
@@ -72,6 +81,7 @@ Spatial analysis and environmental risk assessment of industrial zones in Düsse
   * **Hydrological Vector Buffering:** Generated a 200 meter spatial boundary expanding outward from all aquatic features to model municipal floodplains and peak water level expansion.
   * **Directional Risk Overlay:** Contrasted the active flood threat against passive receptor layers (residential and industrial polygons) to separate direct human displacement risks from secondary chemical contamination risks.
 * **Analytical Takeaway:** Treating the waterway as the hazard source completely changes the vulnerability landscape of Düsseldorf. Map 06a reveals the exact residential neighborhoods that will be physically submerged during a severe flood event, indicating where municipal evacuation routes must be prioritized. Map 06b highlights a severe secondary vulnerability by identifying industrial facilities located inside the flood zone. If floodwaters breach these industrial complexes, the receding water will drag toxic materials directly back into the primary water supply, transforming a natural hydrological disaster into an uncontrollable chemical spill.
+
 ## Map 07: Quantitative Spatial Extraction (500 Meter Industrial Hazard Intersections)
 
 ### Map 07a: Extracted High Risk Residential Geometries
@@ -89,6 +99,7 @@ Spatial analysis and environmental risk assessment of industrial zones in Düsse
   * **Vector Topological Intersection:** Executed the Intersection geoprocessing algorithm to calculate the overlapping geometries between the three receptor layers and the anthropogenic hazard buffer. This creates brand new vector layers containing exclusively the areas where the inputs physically overlap.
   * **High Contrast Symbology:** Applied stark high visibility styling to the newly extracted features against a neutral basemap to emphasize the absolute critical zones within the urban matrix.
 * **Analytical Takeaway:** This mathematical extraction completely isolates the anthropogenic danger zones. Map 07a physically extracts the exact residential structures exposed to severe industrial pollution, providing the geometries needed to calculate the affected population size. Map 07b isolates the specific river segments receiving direct industrial runoff, prioritizing where municipal water quality sensors must be deployed. Map 07c extracts the logistical rail corridors operating inside high threat zones, which is vital for planning hazardous material transport routes and preventing compounding disaster scenarios.
+
 ## Map 08: Quantitative Spatial Extraction (200 Meter Flood Hazard Intersections)
 
 ### Map 08a: Extracted Flood Prone Residential Geometries
@@ -103,6 +114,7 @@ Spatial analysis and environmental risk assessment of industrial zones in Düsse
   * **Vector Topological Intersection:** Executed the Intersection geoprocessing algorithm to calculate the overlapping geometries between the receptor layers and the flood inundation buffer.
   * **Enhanced Cartographic Highlighting:** Applied a vibrant purple fill with an expanded stroke weight and an outer glow render effect to Map 08b. This advanced styling ensures that micro geometries remain highly visible and immediately draw the eye even when viewing the entire urban scale.
 * **Analytical Takeaway:** This mathematical extraction isolates the natural disaster zones and reveals a crucial insight into urban planning. Map 08a extracts the exact residential structures exposed to severe flooding, providing the exact target areas for rescue deployment. Interestingly, Map 08b reveals a very sparse distribution of compromised industrial facilities. This sparsity is a highly positive indicator of effective historical municipal zoning, showing that most heavy industry was successfully built safely outside the riparian zone. However, these few isolated anomalies now represent the most critical secondary threat nodes in the entire city. Because they are so few, environmental agencies can focus all emergency containment funding on these specific pinpointed facilities to prevent toxic spillover during a flood.
+
 ## Map 09: Industrial Distribution and Topographic Context
 
 ![Map 09: Topographic Vulnerability](<Map 09_Topographic Vulnerability.png>)
@@ -114,6 +126,7 @@ Spatial analysis and environmental risk assessment of industrial zones in Düsse
   * **Geometry Dissolve:** Merged administrative boundary subdivisions into a single unified polygon to eliminate internal rendering conflicts.
   * **Inverted Polygon Masking:** Applied an inverted geometry style with a Solid White fill and a Transparent stroke to clip the global web map perfectly to the municipal boundary. Specifying a fully transparent stroke was critical to eliminating rendering artifacts along the boundary edge.
 * **Analytical Takeaway:** The topographic basemap reveals the exact elevation of industrial zones relative to the river valley. By masking the outside world with a transparent stroke boundary, the visual focus remains strictly on the internal municipal terrain. This sets the foundation for calculating the specific downhill threat of the largest industrial facilities.
+
 ## Map 10: Spatial Hazard Analysis and Infrastructure Vulnerability
 
 ### Map 10A: Far View Biggest Facility
@@ -129,9 +142,8 @@ Spatial analysis and environmental risk assessment of industrial zones in Düsse
   * **Proximity Buffering:** Executed a 500 meter dissolve buffer around the facility perimeter to generate a continuous, uniform containment zone representing potential airborne dispersion or surface runoff hazards.
 * **Data Limitations and Proxies:** In the absence of facility specific chemical emission inventories we utilized spatial area as a proxy for maximum industrial scale. We acknowledge that spatial footprint does not directly equate to toxicity as a large logistics warehouse could trigger this extraction over a smaller chemical processing plant. We therefore classify the target strictly as the Biggest Facility rather than the highest toxic threat.
 * **Impact Assessment:** The simulated hazard zone reveals severe spatial vulnerability. The 500 meter radius directly engulfs a major railway line, multiple high density residential blocks, and intersects the main river. The river intersection is particularly critical as topographic runoff from the facility could introduce a secondary aquatic contamination vector.
-## Map 11: Emergency Evacuation and Environmental Remediation Strategy
 
-### Map 11A: Regional Industrial Hazard Context and 500 Meter Buffer Extent
+## Map 11A: Regional Industrial Hazard Context and 500 Meter Buffer Extent
 ![Map 11A Hazard Context](<Map 11A_Industrial Hazard Context.png>)
 
 * **Objective:** To establish the regional industrial footprint and spatial risk extent surrounding the primary manufacturing asset, documenting how secondary industrial units interact with the hazard zone.
@@ -140,20 +152,6 @@ Spatial analysis and environmental risk assessment of industrial zones in Düsse
   * **Industrial Extent Mapping:** Mapped the massive thyssenkrupp Steel Europe AG facility as the core asset while keeping secondary surrounding industrial footprints visible in red across both the interior and exterior of the buffer boundary to capture the complete regional industrial landscape.
   * **Attribute Table and Labeling Setup:** Configured custom text string fields within the vector attribute tables and activated the QGIS labeling engine with high contrast white text buffer halos to ensure clear identification of all regional facilities.
 
-### Map 11B: Tactical Emergency Evacuation and Aquatic Containment Strategy
-![Map 11B Emergency Strategy](<Map 11B_Emergency Evacuation and Remediation Strategy.png>)
-
-* **Objective:** To establish an advanced emergency response protocol and redundant containment strategy for civilian evacuation and aquatic protection following a severe industrial hazard event at the primary facility.
-* **Complete Step-by-Step QGIS Workflow:**
-  * **Vulnerability Intersection:** Executed spatial intersection geoprocessing tools using the buffered facility layer against baseline infrastructure to extract precise vulnerable residences, vulnerable railway, and vulnerable waterway geometries.
-  * **Residential Exposure Mapping:** Highlighted the specific shades of green polygon geometries representing regional residential populations captured within the immediate impact assessment framework, keeping secondary background industrial layers toggled off to maintain absolute visual focus.
-  * **Emergency Evacuation Routing:** Digitized four distinct neon green escape routes with clear custom attribute labels designed to guide residents safely away from the potential hazard zone while bypassing compromised regional transportation corridors.
-  * **Redundant Aquatic Containment Strategy:** Deployed thick purple and black primary and secondary containment boom lines strategically across the main river and regional waterways intersecting the facility perimeter, using the node editing tool to precisely route the lines around secondary obstacles and ensure complete interception of toxic runoff across all three water channels.
-  * **Dynamic Labeling and Collision Management:** Configured QGIS label properties from no labels to single labels, linked value expressions directly to custom attribute fields, activated universal visibility, and enabled settings to show all colliding labels to ensure zero occlusion across dense urban intersections.
-* **Metallurgical Hazard Profile and Operational Strategy:**
-  * **Heavy Metal and Chemical Runoff Mitigation:** Steel manufacturing operations involving blast furnaces, pickling lines, and industrial cooling baths carry high risks of acid and oil laden water runoff during a containment breach, justifying the deployment of redundant primary and secondary containment booms across local waterways to guarantee aquatic protection.
-  * **Thermal and Blast Protection:** High temperature metal processing and combustible industrial gases dictate the strict 500 meter buffer zone surrounding the massive thyssenkrupp facility to safeguard the adjacent residential green population polygons from blast overpressure and air dispersion.
-  * **Logistical Disruption Response:** Industrial heavy freight integration requires four distinct multi-directional neon green vector escape corridors to effectively disperse civilian density away from gridlocked regional transport arteries.
 ## Part 1: Spatial Proximity and Population Impact Analysis
 
 * **Objective:** To quantify the environmental footprint, residential exposure density, and infrastructure vulnerability surrounding the primary heavy manufacturing asset within the Düsseldorf industrial cluster.
@@ -162,9 +160,10 @@ Spatial analysis and environmental risk assessment of industrial zones in Düsse
   * **Population Density Intersection:** Intersected the hazard buffer with regional demographic polygon layers, revealing exactly 17 major residential block zones trapped within the immediate impact zone.
   * **Exposure Quantification:** Executed spatial geometry calculations and dasymetric density mapping to model a potential exposure footprint. Based on total structural area, the model estimates a theoretical maximum capacity of up to 65,298 residents within the high hazard zone.
 * **Findings:** The spatial proximity model indicates a massive potential civilian exposure footprint exceeding 65,000 individuals. While this represents a geometric maximum rather than an exact census headcount, the sheer volume of structural residential capacity engulfed by the multi kilometer facility perimeter heavily justifies the strict delineation of safety zones and the four critical evacuation corridors.
+
 ## Part 2: Air Pollution and Atmospheric Dispersion Modeling
 
-![Map 11C Air Pollution Zones](<Map 11C_Air Pollution.png>)
+![Map 11B Air Pollution Zones](<Map 11B_Air Pollution.png>)
 
 * **Objective:** To model heavy industrial air pollution dispersion and the resulting air quality risks across the surrounding residential zones.
 * **Environmental and Public Health Context:**
@@ -174,3 +173,15 @@ Spatial analysis and environmental risk assessment of industrial zones in Düsse
     * **Moderate Air Pollution (Orange):** The intermediate 200 to 500 meter radius representing scattered diffusion and elevated public health risk.
     * **Low Air Pollution (Green):** The outer 500 to 1000 meter radius where industrial emissions diffuse into safe atmospheric background levels.
 * **Operational Integration:** The spatial air pollution model validates the necessity of the evacuation network, ensuring that civilian corridors direct the estimated 65,298 exposed residents laterally outward away from the high air pollution zones.
+
+## Part 3: Hazard Containment and Emergency Evacuation Infrastructure
+
+![Map 12 Emergency Evacuation Routing](<Map 12_Evacuation Routing.png>)
+
+* **Objective:** To engineer a robust physical containment strategy and designate safe civilian egress corridors to mitigate chemical spills and atmospheric exposure following a severe industrial hazard event.
+* **Infrastructure Design Methodology:**
+  * **Containment Booms:** Designed a two tier defensive perimeter around the core industrial footprint. The primary and secondary purple and black containment boom lines were deployed strategically across the main river and regional waterways intersecting the facility perimeter. The node editing tool was used to precisely route the lines around secondary obstacles, ensuring complete interception of toxic runoff across all water channels.
+  * **Strategic Visual Routing:** Manually digitized four critical neon green evacuation corridors based on direct visual assessment of the hazard gradients. These paths were strategically engineered to navigate the urban grid, bypass compromised regional transportation corridors, and guide the estimated 65,298 exposed residents laterally into the safe Background Clearance Zone.
+* **Findings and Implementation:**
+  * The combination of physical spill containment and manually designated egress routing provides a highly practical emergency response framework. 
+  * By visually anchoring the routes against the actual high severity air pollution zones, the spatial model ensures that human intelligence dictates the safest paths to clean air, guaranteeing rapid deployment of emergency services and safe mass evacuation.
