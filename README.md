@@ -185,3 +185,12 @@ This project employs a macro to micro spatial analytical framework. The research
 * **Findings and Implementation:**
   * The combination of physical spill containment and manually designated egress routing provides a highly practical emergency response framework. 
   * By visually anchoring the routes against the actual high severity air pollution zones, the spatial model ensures that human intelligence dictates the safest paths to clean air, guaranteeing rapid deployment of emergency services and safe mass evacuation.
+## Methodological and Data Limitations
+
+* **Proxy Variable Limitations for Industrial Hazard Scale:** In the absence of facility specific chemical emission inventories and hazardous material manifests, the project utilized the physical ground footprint area as a primary proxy for maximum industrial scale. This assumes that larger spatial footprints correlate directly to higher risk, which overlooks specialized compact chemical processing plants that may pose higher toxicity risks than a large logistics warehouse.
+
+* **Two Dimensional Population Aggregation:** The demographic impact analysis relied on flat polygon area calculations divided by a standard 30 square meter dasymetric constant. Because structural heights and multi story residential capacities were not factored into the model, the resulting figure of 65,298 exposed residents represents a horizontal structural footprint capacity rather than an exact 3D census headcount.
+
+* **Static Geometric Proximity Buffering:** Hazard zones and air pollution dispersion gradients were modeled using uniform concentric geometric buffers (200, 500, and 1000 meters). This static approach assumes omnidirectional atmospheric dispersion and omits dynamic meteorological variables such as prevailing wind direction, microclimates, and seasonal temperature inversions.
+
+* **Manual Routing Constraints:** Evacuation corridors were digitized via manual visual assessment to navigate the urban street grid and avoid spatial choke points. While this incorporated human contextual awareness, manual routing lacks dynamic algorithmic scalability and cannot automatically recalculate travel times or simulate real time traffic congestion under emergency panic conditions.
